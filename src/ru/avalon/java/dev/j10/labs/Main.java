@@ -2,6 +2,7 @@ package ru.avalon.java.dev.j10.labs;
 
 import java.util.Comparator;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,7 +13,14 @@ public class Main {
          * чтобы он содержал 20 строк, расположенных не
          * по порядку.
          */
-	    String[] strings = null;
+            String[] strings = new String[20];
+	    String[] mas = {"q", "w", "d", "r", "g", "t", "y", "h", "i", "m"};              
+            for (int i = 0; i < strings.length; i++){ 
+                int rand = (int)(Math.random() * mas.length);
+                strings[i] = mas[rand];
+            System.out.print(" " + strings[i]);
+            }    
+            System.out.println();
 
 	    /*
 	     * TODO(Студент): Проинициализируйте массив persons
@@ -22,7 +30,7 @@ public class Main {
 	     * 2. Проинициализируйте массив persons 20
 	     *    экземплярыми созданного класса.
 	     */
-	    Person[] persons = null;
+	    Person[] persons = new Inizalation();
 
         /*
          * TODO(Студент): Проинициализируйте переменную sort
@@ -79,6 +87,7 @@ public class Main {
          * 2. С использованием отладчика убедитесь в том,
          *    что массив отсортирован по убыванию.
          */
-        sort.sort(strings, comparator);
+        //sort.sort(strings, comparator);
     }
+    
 }
